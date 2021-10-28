@@ -40,6 +40,8 @@ int main (int argc, char ** argv) {
   srand48 ( seed ) ; // seed the number generator
 
   long long int i;
+  
+  #pragma omp parallel for
   for (i = 0 ; i < N ; i++)
     {
       // take a point P(x,y) inside the unit square
